@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="523.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javagram.ProfileController">
+   <children>
+      <ScrollPane layoutX="-6.0" prefHeight="524.0" prefWidth="172.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btn_user" layoutX="15.0" layoutY="20.0" mnemonicParsing="false" text="User Name" />
+                  <Button fx:id="btn_direct" layoutX="15.0" layoutY="46.0" mnemonicParsing="false" onAction="#onActionMassage" text="Direct Massage" />
+                  <Button fx:id="btn_posts" layoutX="14.0" layoutY="72.0" mnemonicParsing="false" onAction="#onActionPost" text="Post" />
+                  <Button fx:id="btn_search" layoutX="13.0" layoutY="98.0" mnemonicParsing="false" onAction="#onActionSearch" text="Search" />
+                  <Button fx:id="btn_followers" layoutX="12.0" layoutY="124.0" mnemonicParsing="false" onAction="#onActionFollower" text="Followers" />
+                  <Button fx:id="btn_following" layoutX="12.0" layoutY="150.0" mnemonicParsing="false" onAction="#onActionFollowing" text="Following" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Label layoutX="325.0" layoutY="28.0" prefHeight="60.0" prefWidth="172.0" text="Java Gram" textAlignment="CENTER">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbl_user" layoutX="184.0" layoutY="120.0" prefHeight="358.0" prefWidth="454.0">
+        <columns>
+          <TableColumn fx:id="cUser" prefWidth="143.20001220703125" text="User Name" />
+          <TableColumn fx:id="cText" prefWidth="163.99993896484375" text="Post Text" />
+            <TableColumn fx:id="cTime" prefWidth="147.20010375976562" text="Sharing Time" />
+        </columns>
+      </TableView>
+      <Label fx:id="time" layoutX="397.0" layoutY="486.0" text="Time" />
+      <Button fx:id="btn_refresh" layoutX="587.0" layoutY="28.0" mnemonicParsing="false" onAction="#onActionRefresh" text="refresh" />
+   </children>
+</AnchorPane>

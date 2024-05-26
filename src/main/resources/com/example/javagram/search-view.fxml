@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="285.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javagram.SearchController">
+   <children>
+      <TextField fx:id="txt_username" layoutX="99.0" layoutY="40.0" />
+      <Text layoutX="39.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+      <Button fx:id="btn_search" layoutX="276.0" layoutY="40.0" mnemonicParsing="false" onAction="#onActionSearch" text="Search!" />
+      <TableView fx:id="tbl_profile" layoutX="120.0" layoutY="110.0" prefHeight="143.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="cProfiles" prefWidth="199.20001220703125" text="Profiles" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_refresh" layoutX="369.0" layoutY="14.0" mnemonicParsing="false" onAction="#onActionRefres" text="Refresh" />
+      <Button fx:id="btn_profile" layoutX="375.0" layoutY="240.0" mnemonicParsing="false" onAction="#onActionProfile" text="Profile" />
+   </children>
+</AnchorPane>
